@@ -1,18 +1,30 @@
-public class OOPSBannerApp {
+
+
+class OOPSBannerApp {
+
     public static void main(String[] args) {
-         
-        System.out.println("  *** " + "   *** " + "  ****** " + " ***** ");
-        
-        System.out.println(" ** ** " + " ** ** " + " **  ** " + " ** ");
-        
-        System.out.println(" ** ** " + " ** ** " + " **  ** " + " ** ");
-        
-        System.out.println(" ** ** " + " ** ** " + " ****** " + "  *** ");
-        
-        System.out.println(" ** ** " + " ** ** " + " ** " + "       ** ");
-       
-        System.out.println(" ** ** " + " ** ** " + " ** " + "       ** ");
-        
-        System.out.println("  *** " + "   *** " + "  ** " + "    ***** ");
+
+        String[] banner = createBanner();   
+        printBanner(banner);                
+    }
+
+    public static String[] createBanner() {
+
+        return new String[] {
+
+            " *****   *****   ****    ***** ",
+            "*     * *     *  *   *  *      ",
+            "*     * *     *  ****    *****  ",
+            "*     * *     *  *           *  ",
+            " *****   *****   *       *****  "
+        };
+    }
+
+    
+    public static void printBanner(String[] banner) {
+
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
