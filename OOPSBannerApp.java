@@ -1,19 +1,28 @@
-// Program to Render OOPS as Banner using Inline Array Initialization
+
 
 class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        // Inline Array Initialization
-        String[] banner = {
-            "OOOO   OOOOO  PPPP    SSSSS",
-            "O   O  O   O  P   P  S     ",
-            "O   O  O   O  PPPP    SSSSS ",
-            "O   O  O   O  P           S ",
-            "OOOO   OOOOO  P       SSSSS  "
-        };
+        String[] banner = createBanner();   
+        printBanner(banner);                
+    }
 
-        // Printing Banner using loop
+    public static String[] createBanner() {
+
+        return new String[] {
+
+            " *****   *****   ****    ***** ",
+            "*     * *     *  *   *  *      ",
+            "*     * *     *  ****    *****  ",
+            "*     * *     *  *           *  ",
+            " *****   *****   *       *****  "
+        };
+    }
+
+    
+    public static void printBanner(String[] banner) {
+
         for (String line : banner) {
             System.out.println(line);
         }
